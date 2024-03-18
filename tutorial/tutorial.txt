@@ -1,0 +1,138 @@
+Para mostrar calendario : cal 
+Para mostrar un mes: cal -m (numero de mes, o mes en ingles)
+Para fecha: date 
+
+Para saber la ruta donde estas: 
+pwd
+
+Para viajar a carpetas: 
+cd /(carpeta que quieras)
+- Si das TAB despues de / te salen todas las carpetas 
+
+Crear un archivo de texto:
+touch victor.txt 
+
+Para crear carpetas: 
+mkdir (nombre de carpetas, pueden ser muchas) 
+
+para copiar dentro de una carpeta 
+-cp tutorial.txt caperta/  
+hace falta ruta si no estás en escritorio 
+
+
+Para renombrar  
+mv david  feo 
+
+Para mover a otro sitio 
+mv feo home/feo 
+
+PAra ver todas las carpetas de donde estas: 
+ls 
+
+Imprimir por pantalla: echo "texto a imprimir"
+Imprimir contenido de un archivo: cat archivo.txt  
+
+Redireccionar un echo a un archivo: echo "texto a imprimir" > archivo.txt 
+Si quieres conservar anteriores datos: echo "sigo escribiendo" >> archivo.txt
+- COn el >> se van a guardar todas las lineas que incluyas
+- Si solo pusieras >, se va a borrar todo lo anterior
+
+
+Para borrar archivos: rm -R (nombre archivo)
+- Para borrar todo: rm -R *
+
+lista directorios: ls 
+   :ls -l 
+
+Para saber permisos de los archivos 
+
+- rw- rw- r-- 
+  110 110 100
+   6   6   4
+
+Para cambiar permisos: chmod (npermisos) archivo.txt
+Para que se ejecute en todos los usuarios como minimo:
+    chmod 764 archivo.txt 
+ lo normal: chmod 777 archivo.txt
+
+Para ver procesos ejectunadose 
+ps -aux 
+
+Para matar proceso, necesitamos codigo padre
+(el primero con ese nombre)
+kill -9 (codigo padre del proceso)
+
+IMPORTANTE 
+wc 
+
+Abrir manual 
+man wc    (q para salir)
+
+Para contar palabras de algo 
+wc -w (archivo pa leer)
+
+Para contar lineas 
+wc -l (archivo)
+
+
+TUTORIAL PARA COMANDOS 
+- Crear archivo .sh  (touch)
+- Modificar permisos (chmod)
+- llamamos al archivo con pluma: pluma ej.sh &
+- EScribir programa 
+- Ejecutar: ./ej.sh  (porque estas en carpeta)
+        -Para redireccionar
+        echo "loquequieras" >texto.txt (y redireccionas la accion a otro arcjivo)
+
+
+EJEMPLO DE EJ CON VARIABLE 
+
+#!/bin/bash
+echo "Ingresa un número: "
+read DATO1
+echo "El dato introducido es: $DATO1"
+
+PARA HACER OPERACIONES 
+MULTIPLI=$[lo que quieras meter*otra]
+
+
+PROGRAMA QUE RECIBA PARAMETROS Y SE INTRODUZCAN EN LLAMADA
+echo "El nombre del programa es $0"
+echo "El numero de parámetros es $#"
+echo "Primer parámetro $1"
+echo "Segundo parámetro $2"
+echo "Tercero parámetro $3"
+echo "Cuarto parámetro $4"
+
+
+
+EJEMPLO MAYOR o IGUAL 
+if [ $# -ge 2 ];
+then 
+	echo "El número de parámetros es mayor o igual a 2"
+else 
+	echo "El número de parámetro es menor de 2"
+fi
+
+EJEMPLO comparar numeros 
+-gt (es  mayor)
+-eq (es igual)
+
+PARA STRINGS se compara con = 
+
+PARA GUARDAR FALLOS EN TXT en vex de salir por pantalla 
+asd 2> error.txt
+
+
+IMPORTANTE PARA EXAMEN 
+less /etc/passwd 
+q para salir 
+
+-Para quedarte con las palabras que contengan root 
+less/etc/passwd | grep root 
+
+COn grep coge palabras que lleven root 
+la | es para concatenar ordenes 
+
+
+

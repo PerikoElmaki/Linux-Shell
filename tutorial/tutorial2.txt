@@ -1,0 +1,22 @@
+cambiar permisos de archivos de golpe 
+-touch ej10.sh ej09.sh ej08.sh
+-chmod 777 ej* 
+todo lo que empiece por ej-
+
+LOS ESPACIOS ENTRE COSAS 
+SOLO VAN EN LAS CONDICIONES DEL BUCLE 
+
+
+Para que no salte de linea 
+echo -n "Dime num"
+
+
+NUMERO DE PARAMETROS 
+Se llaman con $1 o la posicion que tengan 
+Los parametros se llaman despues del ./ejer.sh hola
+$1 es hola
+
+PARA COMPROBAR o hacer operaciones
+si o si con numeros 
+
+`expr `
